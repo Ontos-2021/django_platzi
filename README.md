@@ -37,3 +37,5 @@ Este es un curso de Django basado en el curso básico de Django de Platzi
         q = Question(question_text="¿Cuál es el mejor curso de Platzi?", pub_date=timezone.now())
 
         q.save()
+
+        q.question_text (devuelve el atributo del objeto)
