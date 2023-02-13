@@ -36,6 +36,10 @@ Este es un curso de Django basado en el curso básico de Django de Platzi
 
         Question.objects.get(pk=1)
 
+        Question.objects.filter(pk=1)
+  
+        Question.objects.filter(question_text__startswith="¿Cuál")
+
         Question.objects.get(pub_date__year=timezone.now().year)
 
         from django.utils import timezone
