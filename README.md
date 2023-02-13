@@ -26,11 +26,17 @@ Este es un curso de Django basado en el curso básico de Django de Platzi
 
 ## Apuntes
 
+- [Making queries - Django Documentation](https://docs.djangoproject.com/en/3.2/topics/db/queries/#field-lookups-intro "Documentación de Django")
+
 - En la consola interactiva
 
         from polls.models import Choice, Question
         
         Question.objects.all()
+
+        Question.objects.get(pk=1)
+
+        Question.objects.get(pub_date__year=timezone.now().year)
 
         from django.utils import timezone
 
