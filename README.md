@@ -61,3 +61,7 @@ Este es un curso de Django basado en el curso básico de Django de Platzi
           Choice.objects.filter(question__pub_date__year=timezone.now().year)
 
           python3 manage.py createsuperuser
+
+          python3 manage.py test polls
+
+
