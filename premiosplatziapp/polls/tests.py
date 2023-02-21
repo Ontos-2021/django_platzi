@@ -5,6 +5,7 @@ from django.urls.base import reverse
 from django.utils import timezone
 
 from .models import Question
+# from .models import Question, Choice
 
 class QuestionModelTest(TestCase):
 
@@ -78,6 +79,15 @@ class QuestionIndexViewTest(TestCase):
         response = self.client.get(reverse("polls:index"))
         self.assertQuerysetEqual(response.context["latest_question_list"], [])
 
+    """def QuestionsWithoutChoices(self):
+        '''
+        If there is a question without choices, so itn't displayed on the index page
+        '''
+        question = create_question("Question without choices", days=-30)
+        print(f"Estos son los choices de la pregunta: {Choice.question}")
+        response = self.client.get(reverse("polls:index"))
+        """
+
 class QuestionDetailViewTests(TestCase):
     
     def test_future_question(self):
@@ -97,3 +107,11 @@ class QuestionDetailViewTests(TestCase):
         url = reverse("polls:detail", args=(past_question.pk,))
         response = self.client.get(url)
         self.assertContains(response, past_question.question_text)
+
+"""class QuestionResultsViewTests(TestCase):
+
+    def QuestionsWithoutChoices(self):
+        '''
+        If there is a Question without choices, so there 
+        '''
+        pass"""
