@@ -64,4 +64,14 @@ Este es un curso de Django basado en el curso básico de Django de Platzi
 
           python3 manage.py test polls
 
+- Pasos para hacer testing.
 
+  1- Identificar un problema
+
+  2- Crear un test para solucionar ese problema
+
+  3- Correr el test
+
+  4- Arreglamos el problema
+
+  5- Volvemos a correr los test
